@@ -2,23 +2,8 @@
   "name": "treesitter_test",
   "rules": {
     "source_file": {
-      "type": "REPEAT",
-      "content": {
-        "type": "SYMBOL",
-        "name": "case"
-      }
-    },
-    "case": {
       "type": "SEQ",
       "members": [
-        {
-          "type": "SYMBOL",
-          "name": "doubleBar"
-        },
-        {
-          "type": "SYMBOL",
-          "name": "_newLine"
-        },
         {
           "type": "CHOICE",
           "members": [
@@ -39,6 +24,26 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "case"
+          }
+        }
+      ]
+    },
+    "case": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "doubleBar"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_newLine"
         },
         {
           "type": "REPEAT1",

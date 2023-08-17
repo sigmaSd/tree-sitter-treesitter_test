@@ -3,13 +3,15 @@
 module.exports = grammar({
   name: "treesitter_test",
   rules: {
-    source_file: ($) => repeat($.case),
+    source_file: ($) => seq(
+      // non standard, this is custom made for injection regex
+      optional(seq($.codeTypeComment, $._newLine)),
+      repeat($.case),
+    ),
     case: ($) =>
       seq(
         $.doubleBar,
         $._newLine,
-        // non standard, this is custom made for injection regex
-        optional(seq($.codeTypeComment, $._newLine)),
         repeat1(seq($.caseName, $._newLine)),
         $.doubleBar,
         $._newLine,

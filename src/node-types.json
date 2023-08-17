@@ -25,10 +25,6 @@
           "named": true
         },
         {
-          "type": "codeTypeComment",
-          "named": true
-        },
-        {
           "type": "doubleBar",
           "named": true
         },
@@ -104,6 +100,10 @@
       "types": [
         {
           "type": "case",
+          "named": true
+        },
+        {
+          "type": "codeTypeComment",
           "named": true
         }
       ]
