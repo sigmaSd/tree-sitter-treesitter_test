@@ -29,6 +29,7 @@ roots = []
 hx -g fetch && hx -g build
 mkdir -p ~/.config/helix/runtime/queries/treesitter_test
 ln -s ~/.config/helix/runtime/grammars/sources/treesitter_test/queries/highlights.scm  ~/.config/helix/runtime/queries/treesitter_test/highlights.scm
+ln -s ~/.config/helix/runtime/grammars/sources/treesitter_test/queries/injections.scm  ~/.config/helix/runtime/queries/treesitter_test/injections.scm
 hx test.ts_test # should work now
 ```
 
