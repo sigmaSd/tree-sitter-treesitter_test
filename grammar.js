@@ -8,6 +8,8 @@ module.exports = grammar({
       seq(
         $.doubleBar,
         $._newLine,
+        // non standard, this is custom made for injection regex
+        optional(seq($.codeTypeComment, $._newLine)),
         repeat1(seq($.caseName, $._newLine)),
         $.doubleBar,
         $._newLine,
@@ -18,6 +20,8 @@ module.exports = grammar({
       ),
     doubleBar: () => repeat1("="),
     _newLine: () => "\n",
+    codeTypeComment: ($) => seq(";", $.codeType),
+    codeType: () => /[^\n]+/,
     // don't allow casename that starts with =
     // TODO: can this be removed
     caseName: () => repeat1(/[^=][^\n]+/),
