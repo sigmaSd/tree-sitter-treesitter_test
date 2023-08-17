@@ -20,6 +20,27 @@
           "name": "_newLine"
         },
         {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "SEQ",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "codeTypeComment"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "_newLine"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
           "type": "REPEAT1",
           "content": {
             "type": "SEQ",
@@ -84,11 +105,28 @@
       "type": "STRING",
       "value": "\n"
     },
+    "codeTypeComment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": ";"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "codeType"
+        }
+      ]
+    },
+    "codeType": {
+      "type": "PATTERN",
+      "value": "[^\\n]+"
+    },
     "caseName": {
       "type": "REPEAT1",
       "content": {
         "type": "PATTERN",
-        "value": "[^=][^\\n]+"
+        "value": "[^;=][^\\n]+"
       }
     },
     "code": {

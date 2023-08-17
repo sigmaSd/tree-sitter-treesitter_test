@@ -25,6 +25,10 @@
           "named": true
         },
         {
+          "type": "codeTypeComment",
+          "named": true
+        },
+        {
           "type": "doubleBar",
           "named": true
         },
@@ -39,6 +43,21 @@
     "type": "caseName",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "codeTypeComment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "codeType",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "doubleBar",
@@ -103,11 +122,19 @@
     "named": false
   },
   {
+    "type": ";",
+    "named": false
+  },
+  {
     "type": "=",
     "named": false
   },
   {
     "type": "code",
+    "named": true
+  },
+  {
+    "type": "codeType",
     "named": true
   }
 ]

@@ -23,8 +23,9 @@ module.exports = grammar({
     codeTypeComment: ($) => seq(";", $.codeType),
     codeType: () => /[^\n]+/,
     // don't allow casename that starts with =
+    // don't allow casename thats starts with ;
     // TODO: can this be removed
-    caseName: () => repeat1(/[^=][^\n]+/),
+    caseName: () => repeat1(/[^;=][^\n]+/),
     // don't allow code that starts with -
     // TODO: can this be removed
     code: () => /[^-][^\n]+/,
