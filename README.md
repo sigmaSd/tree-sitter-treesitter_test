@@ -31,3 +31,5 @@ mkdir -p ~/.config/helix/runtime/queries/treesitter_test
 ln -s ~/.config/helix/runtime/grammars/sources/treesitter_test/queries/highlights.scm  ~/.config/helix/runtime/queries/treesitter_test/highlights.scm
 hx test.ts_test # should work now
 ```
+
+![image](https://github.com/sigmaSd/tree-sitter-treesitter_test/assets/22427111/b493992f-15ae-430a-8173-81e42968e310)
