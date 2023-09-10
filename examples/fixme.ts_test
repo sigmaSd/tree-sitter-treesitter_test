@@ -9,4 +9,46 @@ parameter inside comment
 (source_file
   (signal
     (value)
-
+    (dict
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))
+          (comment)))
+      (dictElem
+        (dictKey)
+        (parameter
+          (values
+            (value
+              (integer)))
+          (comment))))))
